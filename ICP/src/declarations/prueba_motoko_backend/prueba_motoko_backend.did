@@ -1,0 +1,25 @@
+type UserID = principal;
+type Points = nat;
+type BusinessID = text;
+type Business = 
+ record {
+   category: text;
+   description: text;
+   id: BusinessID;
+   location: record {
+               lat: float64;
+               lng: float64;
+             };
+   logo: opt text;
+   name: text;
+   owner: principal;
+   pointsRate: float64;
+ };
+service : {
+  claimReward: (text) -> (bool);
+  getBusinessIds: () -> (vec text) query;
+  getNearbyBusinesses: (float64, float64, float64) -> (vec Business) query;
+  getTourismRecommendations: (UserID) -> (vec Business) query;
+  recordPurchase: (BusinessID, float64) -> (Points);
+  registerBusiness: (Business) -> (bool);
+}
