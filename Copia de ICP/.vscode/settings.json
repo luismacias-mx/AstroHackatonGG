@@ -1,0 +1,6 @@
+{
+    "http.proxy": "socks5://127.0.0.1:10810",
+    "https.proxy": "socks5://127.0.0.1:10810",
+    "http.proxySupport": "on"
+  }
+  
