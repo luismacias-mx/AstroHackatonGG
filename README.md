@@ -1,4 +1,4 @@
-# AstroHackatonGG
+# AstroHackaton - EQUIPO Neiyaari
 # E-mporio – Turismo que Conecta
 
 _E-mporio_ es una plataforma Web3 construida sobre Internet Computer (ICP) que recompensa a los turistas por apoyar negocios locales emergentes. Conecta a viajeros con experiencias auténticas mediante tecnología descentralizada, tokens y reputación digital.
@@ -32,5 +32,29 @@ E-mporio (emporio + digital) representa un nuevo centro de valor económico dond
 
 ---
 
-## ⚙️ Estructura del Repositorio
+
+# Arquitectura Técnica de E-mporio
+
+```plaintext
+[Turista (Usuario)]
+     |
+     | escanea
+     v
+[QR Code físico]
+     |
+     | abre/interactúa con
+     v
+[Frontend (React + Vite)]
+     |
+     | envía datos a
+     v
+[Backend (Canister en Motoko)]
+     |
+     | guarda datos en
+     v
+[Blockchain ICP]
+     |
+     |-----------------------------|
+     v                             v
+ [Tokens de recompensa]      [NFTs / SBTs (logros)]
 
